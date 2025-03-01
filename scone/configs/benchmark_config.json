@@ -1,0 +1,83 @@
+{
+  "model_configs": [
+    {
+      "name": "SCONE-Small-100K",
+      "model_path": "./outputs/scone-small-100k/final_model",
+      "embedding_cache_path": "./outputs/scone-small-100k/embeddings.cache",
+      "f_gram_model_size": "small",
+      "max_f_grams": 100000
+    },
+    {
+      "name": "SCONE-Small-500K",
+      "model_path": "./outputs/scone-small-500k/final_model",
+      "embedding_cache_path": "./outputs/scone-small-500k/embeddings.cache",
+      "f_gram_model_size": "small",
+      "max_f_grams": 500000
+    },
+    {
+      "name": "SCONE-Small-1M",
+      "model_path": "./outputs/scone-small-1m/final_model",
+      "embedding_cache_path": "./outputs/scone-small-1m/embeddings.cache",
+      "f_gram_model_size": "small",
+      "max_f_grams": 1000000
+    },
+    {
+      "name": "SCONE-Medium-100K",
+      "model_path": "./outputs/scone-medium-100k/final_model",
+      "embedding_cache_path": "./outputs/scone-medium-100k/embeddings.cache",
+      "f_gram_model_size": "medium",
+      "max_f_grams": 100000
+    },
+    {
+      "name": "SCONE-Medium-500K",
+      "model_path": "./outputs/scone-medium-500k/final_model",
+      "embedding_cache_path": "./outputs/scone-medium-500k/embeddings.cache",
+      "f_gram_model_size": "medium",
+      "max_f_grams": 500000
+    },
+    {
+      "name": "SCONE-Medium-1M",
+      "model_path": "./outputs/scone-medium-1m/final_model",
+      "embedding_cache_path": "./outputs/scone-medium-1m/embeddings.cache",
+      "f_gram_model_size": "medium",
+      "max_f_grams": 1000000
+    }
+  ],
+  "baseline_configs": [
+    {
+      "name": "GPT2-Small",
+      "model_name": "gpt2"
+    },
+    {
+      "name": "GPT2-Medium",
+      "model_name": "gpt2-medium"
+    }
+  ],
+  "dataset_configs": [
+    {
+      "name": "WikiText-103",
+      "dataset_name": "wikitext",
+      "dataset_config_name": "wikitext-103-v1",
+      "text_column": "text",
+      "split": "test"
+    },
+    {
+      "name": "C4",
+      "dataset_name": "c4",
+      "dataset_config_name": "en",
+      "text_column": "text",
+      "split": "validation"
+    },
+    {
+      "name": "PG19",
+      "dataset_name": "pg19",
+      "dataset_config_name": null,
+      "text_column": "text",
+      "split": "test"
+    }
+  ],
+  "batch_sizes": [1, 4, 8],
+  "sequence_lengths": [512, 1024],
+  "num_runs": 5,
+  "warmup_runs": 2
+} 

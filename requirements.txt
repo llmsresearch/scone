@@ -1,0 +1,43 @@
+# Core dependencies
+torch>=1.10.0  # Required for distributed training and mixed precision features
+transformers
+datasets
+numpy
+tqdm
+hydra-core
+omegaconf
+pyyaml
+
+# For quantization
+bitsandbytes>=0.35.0  # Required for INT4 quantization support
+
+# For benchmarking
+psutil
+
+# For visualization
+matplotlib
+tensorboard
+
+# For development
+pytest
+black
+isort
+flake8
+mypy
+
+# Data processing
+pandas
+nltk
+
+# Utilities
+joblib
+
+# Visualization
+seaborn
+
+# Testing
+pytest-cov
+
+# Optional dependencies
+faiss-cpu  # or faiss-gpu for GPU support
+wandb 

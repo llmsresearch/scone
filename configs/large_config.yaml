@@ -1,0 +1,48 @@
+# Large configuration for SCONE
+
+# Data configuration
+data:
+  dataset_name: wikitext
+  dataset_config_name: wikitext-103-v1
+  text_column: text
+  max_length: 512
+  max_n: 4  # Increased from 3
+  min_freq: 50  # Decreased from 100
+  max_f_grams: 5000000  # Increased from 1000000
+
+# Model configuration
+model:
+  base_model_name: gpt2-large
+  hidden_size: 1280
+  num_hidden_layers: 36
+  num_attention_heads: 20
+  intermediate_size: 5120
+  hidden_act: gelu
+  hidden_dropout_prob: 0.1
+  attention_probs_dropout_prob: 0.1
+  max_position_embeddings: 1024
+  type_vocab_size: 2
+  initializer_range: 0.02
+  layer_norm_eps: 1e-12
+  use_f_gram_embeddings: true
+
+# Training configuration
+training:
+  output_dir: ./outputs/scone-large
+  num_epochs: 3
+  batch_size: 4  # Decreased from 8 due to larger model
+  learning_rate: 3e-5  # Decreased from 5e-5
+  weight_decay: 0.01
+  warmup_steps: 1000  # Increased from 0
+  max_grad_norm: 1.0
+  logging_steps: 100
+  save_steps: 1000
+  eval_steps: 1000
+  seed: 42
+  gradient_accumulation_steps: 4  # Added for larger model
+  fp16: true  # Added for faster training
+
+# Inference configuration
+inference:
+  use_memory_map: true
+  batch_size: 16  # Decreased from 32 due to larger model 
