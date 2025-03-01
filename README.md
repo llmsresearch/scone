@@ -9,7 +9,7 @@
 This repository contains an implementation of the SCONE (Scalable, Contextualized, Offloaded, N-gram Embedding) method as described in the paper ["Scaling Embedding Layers in Language Models"](https://arxiv.org/abs/2502.01637) by Da Yu, Edith Cohen, Badih Ghazi, Yangsibo Huang, Pritish Kamath, Ravi Kumar, Daogao Liu, and Chiyuan Zhang.
 
 <p align="center">
-  <img src="https://github.com/llmsresearch/scone/raw/main/assets/architecture.png" alt="SCONE Architecture" width="600"/>
+  <img src="https://raw.githubusercontent.com/llmsresearch/scone/refs/heads/master/assets/architecture.png" alt="SCONE Architecture" width="600"/>
 </p>
 
 ## Overview
@@ -18,7 +18,7 @@ SCONE is a method for extending input embedding layers to enhance language model
 
 1. **Decoupled Input and Output Embeddings**: SCONE retains the original vocabulary for output (logits) while introducing embeddings for frequent n-grams (f-grams) for input.
 
-2. **Contextualized Embeddings**: These embeddings provide contextualized representation for each input token and are learned with a separate model during training.
+2. **Contextualized Embeddings**: These embeddings provide a contextualized representation for each input token and are learned with a separate model during training.
 
 3. **Offloaded Storage**: During inference, embeddings are precomputed and stored in off-accelerator memory (e.g., RAM or disk) with minimal impact on inference speed.
 
@@ -26,10 +26,10 @@ SCONE is a method for extending input embedding layers to enhance language model
    - Increasing the number of cached n-gram embeddings
    - Scaling the model used to learn them
 
-All while maintaining fixed inference-time FLOPS. Please refer SCONE algorithm below.
+All while maintaining fixed inference-time FLOPS. Please refer to the SCONE algorithm below.
 
 <p align="center">
-  <img src="https://github.com/llmsresearch/scone/raw/main/assets/algorithm.png" alt="SCONE Algorithm" width="600"/>
+  <img src="https://raw.githubusercontent.com/llmsresearch/scone/refs/heads/master/assets/algorithm.png" alt="SCONE Algorithm" width="600"/>
 </p>
 
 ## 🚀 Key Features
