@@ -9,7 +9,7 @@
 This repository contains an implementation of the SCONE (Scalable, Contextualized, Offloaded, N-gram Embedding) method as described in the paper ["Scaling Embedding Layers in Language Models"](https://arxiv.org/abs/2502.01637) by Da Yu, Edith Cohen, Badih Ghazi, Yangsibo Huang, Pritish Kamath, Ravi Kumar, Daogao Liu, and Chiyuan Zhang.
 
 <p align="center">
-  <img src="https://github.com/yourusername/scone/raw/main/assets/scone_architecture.png" alt="SCONE Architecture" width="600"/>
+  <img src="https://github.com/llmsresearch/scone/raw/main/assets/architecture.png" alt="SCONE Architecture" width="600"/>
 </p>
 
 ## Overview
@@ -26,7 +26,11 @@ SCONE is a method for extending input embedding layers to enhance language model
    - Increasing the number of cached n-gram embeddings
    - Scaling the model used to learn them
 
-All while maintaining fixed inference-time FLOPS.
+All while maintaining fixed inference-time FLOPS. Please refer SCONE algorithm below.
+
+<p align="center">
+  <img src="https://github.com/llmsresearch/scone/raw/main/assets/algorithm.png" alt="SCONE Algorithm" width="600"/>
+</p>
 
 ## 🚀 Key Features
 
