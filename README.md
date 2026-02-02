@@ -6,6 +6,9 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2502.01637-b31b1b.svg)](https://arxiv.org/abs/2502.01637)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Transformers-yellow)](https://huggingface.co/docs/transformers/index)
 
+> This implementation is part of [LLMs Research](https://llmsresearch.substack.com), where I break down ~100 papers weekly and build the ones worth building.
+
+---
 This repository contains an implementation of the SCONE (Scalable, Contextualized, Offloaded, N-gram Embedding) method as described in the paper ["Scaling Embedding Layers in Language Models"](https://arxiv.org/abs/2502.01637) by Da Yu, Edith Cohen, Badih Ghazi, Yangsibo Huang, Pritish Kamath, Ravi Kumar, Daogao Liu, and Chiyuan Zhang.
 
 <p align="center">
